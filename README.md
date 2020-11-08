@@ -1,6 +1,5 @@
 # bébéchèvre 
 
-
 # Table of contents
 1. [Description](#Description)
 2. [Installation instructions](#Installation-instructions)
@@ -11,7 +10,7 @@
 ## Description: 
 This project is NOT about baby goats, despite its name. This project helps save users time by generating a README file using a script. Users are then free to add or remove anything from their file in order to customize it to their needs and/or wants. This is ideal for any developer who wants to share what they are working on.
 
-Here is a link to a youtube video of the working product. 
+Here is a [link](https://youtu.be/8It383aUTiY) to a youtube video of the working product. 
 
 Here is what entering input looks like:
 ![user entering input](./images/userinput.JPG)
