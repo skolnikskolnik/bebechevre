@@ -44,7 +44,8 @@ const generateMarkdown = (data) => {
     getLicenseURL(data);
     //licenseURL is now a variable with the image URL for the license
 
-    let gitHubURL = `github.com/${data.github_username}`;
+    let gitHubURL = `https://github.com/${data.github_username}`;
+    console.log(gitHubURL);
     let emailAddress = data.email;
 
     //What is below gets recorded to the new file
