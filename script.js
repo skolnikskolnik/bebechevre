@@ -5,37 +5,37 @@ const fs = require('fs');
 const generateMarkdown = (data, fileName) => {
     //What is below gets recorded to the new file
     return `
-    # ${data.title} 
+# ${data.title} 
 
-    # Table of contents
-    1. [Description](#desc)
-    2. [Installation instructions](#install)
-    3. [Usage](#usage)
-    4. [Contributions](#contr)
-    5. [Testing instructions](#testing)
-    6. [License](#lic)
-    7. [Questions](#quest)
+# Table of contents
+1. [Description](#desc)
+2. [Installation instructions](#install)
+3. [Usage](#usage)
+4. [Contributions](#contr)
+5. [Testing instructions](#testing)
+6. [License](#lic)
+7. [Questions](#quest)
 
-    <a name="desc"></a>
-    ## Description: ${data.description}
+<a name="desc"></a>
+## Description: ${data.description}
 
-    <a name="install"></a>
-    ## Installation instructions: ${data.installation_instructions}
+<a name="install"></a>
+## Installation instructions: ${data.installation_instructions}
 
-    <a name="usage"></a>
-    ## Usage: ${data.usage_information}
+<a name="usage"></a>
+## Usage: ${data.usage_information}
 
-    <a name="contr"></a>
-    ## Contributions: ${data.contribution}
+<a name="contr"></a>
+## Contributions: ${data.contribution}
 
-    <a name="testint"></a>
-    ## Testing instructions: ${data.test_instruction}
+<a name="testint"></a>
+## Testing instructions: ${data.test_instruction}
 
-    <a name="lic"></a>
-    ## License
+<a name="lic"></a>
+## License
 
-    <a name="quest"></a>
-    ## Questions
+<a name="quest"></a>
+## Questions
     `;
 
 }
