@@ -1,11 +1,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 let licenseURL = "";
+let license = "";
 
 //Function to generate URL for github licence
 //Got image URLs from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 const getLicenseURL = data => {
-   let license = data.license;
+   license = data.license;
    if (license == "MIT License"){
        licenseURL = "https://camo.githubusercontent.com/3ccf4c50a1576b0dd30b286717451fa56b783512/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d79656c6c6f772e737667";
    }
@@ -34,12 +35,16 @@ const getLicenseURL = data => {
        licenseURL = "";
    }
    return licenseURL;
+   return license;
 }
 
 //Function to generate the markdown for the README
-const generateMarkdown = (data, fileName) => {
+const generateMarkdown = (data) => {
     getLicenseURL(data);
     //licenseURL is now a variable with the image URL for the license
+
+    let gitHubURL = `http.www.github.com/${data.github_username}`;
+    let emailAddress = data.email;
 
     //What is below gets recorded to the new file
     return `
@@ -56,25 +61,33 @@ const generateMarkdown = (data, fileName) => {
 7. [Questions](#quest)
 
 <a name="desc"></a>
-## Description: ${data.description}
+## Description: 
+${data.description}
 
 <a name="install"></a>
-## Installation instructions: ${data.installation_instructions}
+## Installation instructions: 
+${data.installation_instructions}
 
 <a name="usage"></a>
-## Usage: ${data.usage_information}
+## Usage: 
+${data.usage_information}
 
 <a name="contr"></a>
-## Contributions: ${data.contribution}
+## Contributions: 
+${data.contribution}
 
 <a name="testint"></a>
-## Testing instructions: ${data.test_instruction}
+## Testing instructions: 
+${data.test_instruction}
 
 <a name="lic"></a>
-## License
+## License:  
+This project is covered under the ${license} license.
 
 <a name="quest"></a>
 ## Questions
+Visit my [github page](${gitHubURL}).   
+Email me at ${emailAddress}.
     `;
 
 }
@@ -136,7 +149,7 @@ const promptUser = async () => {
         ]);
 
         const fileName = `${answers.title}README.md`;
-        const md = generateMarkdown(answers, fileName);
+        const md = generateMarkdown(answers);
 
         fs.writeFileSync (fileName, md);
 
