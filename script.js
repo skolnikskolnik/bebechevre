@@ -6,9 +6,8 @@ const writeToFile = (fileName, data) => {
 }
 
 //Function to generate the markdown for the README
-//Not sure how to construct this function
 const generateMarkdown = (data) => {
-    writeToFile("samplefile.md", data);
+    writeToFile(`${data.title}.md`, data);
     //What is below gets recorded to the new file
     return `
     # ${data.title} 
@@ -80,7 +79,7 @@ const promptUser = async () => {
 
         const md = generateMarkdown(answers);
 
-        fs.writeFileSync ('samplefile.md', md);
+        fs.writeFileSync (`${answers.title}.md`, md);
 
         console.log("Succssfully recorded your entry");
     } catch (err) {
