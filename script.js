@@ -52,42 +52,35 @@ const generateMarkdown = (data) => {
 
 ![icon for license](${licenseURL})
 # Table of contents
-1. [Description](#desc)
-2. [Installation instructions](#install)
+1. [Description](#Description)
+2. [Installation instructions](#Installation-instructions)
 3. [Usage](#usage)
-4. [Contributions](#contr)
-5. [Testing instructions](#testing)
-6. [License](#lic)
-7. [Questions](#quest)
+4. [Contributions](#Contributions)
+5. [Testing instructions](#Testing-instructions)
+6. [License](#License)
+7. [Questions](#Questions)
 
-<a name="desc"></a>
 ## Description: 
 ${data.description}
 
-<a name="install"></a>
 ## Installation instructions: 
 ${data.installation_instructions}
 
-<a name="usage"></a>
 ## Usage: 
 ${data.usage_information}
 
-<a name="contr"></a>
 ## Contributions: 
 ${data.contribution}
 
-<a name="testint"></a>
 ## Testing instructions: 
 ${data.test_instruction}
 
-<a name="lic"></a>
 ## License:  
 This project is covered under the ${license} license.
 
-<a name="quest"></a>
 ## Questions
-Visit my [github page](${gitHubURL}).   
-Email me at ${emailAddress}.
+Visit my [github page](${gitHubURL}).  return 
+Email me at ${emailAddress} with any additional questions you may have. I am always happy to talk to users of my product!
     `;
 
 }
