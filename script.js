@@ -86,7 +86,7 @@ ${data.test_instruction}
 This project is covered under the ${license} license.
 
 ## Questions
-Visit my <a href='www.github.com/${gitHubUsr}'>github page.</a> 
+Visit my <a href='https://www.github.com/${gitHubUsr}'>github page.</a> 
 
 Email me at ${emailAddress} with any additional questions you may have. I am always happy to talk to users of my product!
     `;

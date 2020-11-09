@@ -19,7 +19,7 @@ This project is NOT about baby goats, despite its name. This project helps save 
 For this application, users will need to install the node package manager as well as the inquirer package. They will then be able to download the javascript and begin generating readme files. 
 
 ## Usage: 
-This project is for any student or developer who wants to write high quality readmes but doesn't want to spend a lot of time on them.
+This project is for any student or developer who wants to write high quality readmes but doesn't want to spend a lot of time on them. 
 
 ## Contributions: 
 As of now, this is a solo project just for skolnikskolnik
@@ -31,7 +31,7 @@ To open the readme.md file in vs code, click "control shift v" and make sure the
 This project is covered under the MIT License license.
 
 ## Questions
-Visit my <a href='www.github.com/skolnikskolnik'>github page.</a> 
+Visit my <a href='https://www.github.com/skolnikskolnik'>github page.</a> 
 
 Email me at jtskolnik@gmail.com with any additional questions you may have. I am always happy to talk to users of my product!
     
