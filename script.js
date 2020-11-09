@@ -44,8 +44,7 @@ const generateMarkdown = (data) => {
     getLicenseURL(data);
     //licenseURL is now a variable with the image URL for the license
 
-    let gitHubURL = `https://github.com/${data.github_username}`;
-    console.log(gitHubURL);
+    let gitHubUsr = data.github_username;
     let emailAddress = data.email;
 
     //What is below gets recorded to the new file
@@ -81,7 +80,7 @@ ${data.test_instruction}
 This project is covered under the ${license} license.
 
 ## Questions
-Visit my [github page](${gitHubURL}).  
+Visit my  <a href="https://www.github.com/${gitHubUsr}">github page.</a>
 Email me at ${emailAddress} with any additional questions you may have. I am always happy to talk to users of my product!
     `;
 
