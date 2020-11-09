@@ -4,7 +4,7 @@ const axios = require('axios');
 
 let licenseURL = "";
 let license = "";
-let ghImages = "";
+
 
 //Function to generate URL for github licence
 //Got image URLs from https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
@@ -57,7 +57,7 @@ const generateMarkdown = (data) => {
 # ${data.title} 
 
 ![icon for license](${licenseURL})
-<hr>
+
 # Table of contents
 1. [Description](#Description)
 2. [Installation instructions](#Installation-instructions)
@@ -86,7 +86,8 @@ ${data.test_instruction}
 This project is covered under the ${license} license.
 
 ## Questions
-Visit my  <a href="https://www.github.com/${gitHubUsr}">github page.</a>
+Visit my <a href='www.github.com/${gitHubUsr}'>github page.</a> 
+
 Email me at ${emailAddress} with any additional questions you may have. I am always happy to talk to users of my product!
     `;
 
